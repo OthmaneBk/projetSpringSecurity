@@ -6,6 +6,7 @@ import {
 } from 'mdb-react-ui-kit';
 import { signup } from '../Controller';
 import imagePath from '../images/SpringSec.jpg';
+import Personne from '../Model/Personne';
 
 function SignupPage() {
 
@@ -34,8 +35,10 @@ function SignupPage() {
             if (password !== confirmPassword) {
                 throw new Error("Passwords do not match");
             }
-
-            const response = await signup(fullUsername,password,role)
+            
+            let personne=new Personne(fullUsername,password,role);
+            
+            const response = await signup(personne.nomutilisateur,personne.motdepasse,personne.roleuti)
             history('/');
         } catch (error) {
             // Handle signup error
