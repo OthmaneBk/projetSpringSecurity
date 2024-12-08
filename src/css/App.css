@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+
+.conteneur{
+  background-color: antiquewhite;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.centerLine{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.class >*{
+  display: block;
+}
+
+
+
+.span2{
+  position: fixed;
+  top: 40%; 
+  left:47%; 
+  right: 30%;
+}
